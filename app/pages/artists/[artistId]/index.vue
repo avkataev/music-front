@@ -25,7 +25,7 @@ onMounted(async () => {
         </div>
       </div>
       <card>
-        <h2 class="text-4xl font-bold">{{artist?.name}}</h2>
+        <h2 class="text-4xl font-bold">{{artist?.title}}</h2>
       </card>
       <card class="row-span-2">3</card>
       <card>

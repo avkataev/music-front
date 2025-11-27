@@ -4,7 +4,7 @@ import {useArtist} from "~/composables/useArtist";
 const {findAll, data: dataArtists} = useArtist()
 findAll()
 const search = ref('')
-const dataArtistsFiltered = computed(() => dataArtists.value?.filter(artist => artist.name.toLowerCase().includes(search.value.toLowerCase())) || [])
+const dataArtistsFiltered = computed(() => dataArtists.value?.filter(artist => artist.title.toLowerCase().includes(search.value.toLowerCase())) || [])
 </script>
 
 <template>
@@ -43,7 +43,7 @@ const dataArtistsFiltered = computed(() => dataArtists.value?.filter(artist => a
             class="block border border-gray-300 rounded-lg p-2 mt-2 cursor-pointer hover:bg-gray-100"
             :to="'/artists/' + artist.id"
         >
-          <div>{{ artist.name }} ({{ artist.dateStart }})</div>
+          <div>{{ artist.title }} ({{ artist.dateStart }})</div>
         </router-link>
       </div>
 

@@ -4,7 +4,7 @@ import {useArtist} from "~/composables/useArtist";
 const {findAll, data: dataArtists} = useArtist()
 findAll()
 const search = ref('')
-const dataArtistsFiltered = computed(() => dataArtists.value.filter(artist => artist.name.toLowerCase().includes(search.value.toLowerCase())))
+const dataArtistsFiltered = computed(() => dataArtists.value.filter(artist => artist.title.toLowerCase().includes(search.value.toLowerCase())))
 </script>
 
 <template>
